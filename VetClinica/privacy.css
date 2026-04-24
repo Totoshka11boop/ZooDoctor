@@ -1,0 +1,128 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: #fff;
+            color: #1e2a3a;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 1rem 0;
+        }
+
+        .logo a {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #2c7a4d;
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: #f9a826;
+            margin-right: 6px;
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: #2c7a4d;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 1.2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #1e2a3a;
+            font-weight: 500;
+            transition: 0.3s;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            color: #2c7a4d;
+            border-bottom-color: #2c7a4d;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 1.5rem 0;
+            color: #1f5e3a;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin: 1.2rem 0 0.8rem;
+            color: #2c7a4d;
+        }
+
+        p {
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #1e2a36;
+            color: #ccc;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        @media (max-width:768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                padding: 1rem 0;
+            }
+
+            .nav-menu.show {
+                display: flex;
+            }
+        }
